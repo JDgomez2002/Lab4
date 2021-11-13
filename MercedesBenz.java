@@ -11,20 +11,11 @@
 //Actividad: Laboratorio 4
 
 /**
- * Clase Controlador
+ * Clase  MercedesBenz 
  * 
  * @author Grupo 8
- * @version Controlador 1.1
+ * @version MercedesBenz 1.1
  */
-
-public class Controlador {
-    /**
-     * Metodo para ejecutar la simulacion de la tienda
-     * 
-     * @author Grupo 9
-     * @version ElectronicaLatinoamericana 1.1
-     */
-            Vista interfaz = new Vista();
-            
-           
+public class MercedesBenz {
+    
 }

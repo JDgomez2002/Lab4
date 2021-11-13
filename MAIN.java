@@ -19,6 +19,7 @@
 
 public class MAIN{
     public static void main(String[] args) {
-        
+        Vista interfaz = new Vista(); 
+         interfaz.MenuEncender();
     }
 }
