@@ -16,6 +16,6 @@
  * @author Grupo 8
  * @version ClaseC 1.1
  */
-public class ClaseC {
+public class ClaseC implements Radio {
     
 }

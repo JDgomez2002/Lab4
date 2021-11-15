@@ -26,5 +26,30 @@ interface Radio {
 
     void cambiar_fm_am();
 
+    void cambiar_emisora();
+
+    void guardar_emisora();
+
+    void cargar_emisora();
+
+    boolean get_estado_radio();
+
+    int get_volumen_radio();
+
+    void seleccionar_lista_reproduccion(int seleccrepro);
+
+    void cambiar_cancion();
+
+    void escuchar_cancion();
+
+    void conectar_desconectar_telefono();
+
+    String mostrar_contactos();
+
+    String llamar_contacto();
+
+    String finalizar_llamada();
+
+
     
 }
