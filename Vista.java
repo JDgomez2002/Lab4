@@ -119,9 +119,9 @@ public class Vista {
      * @version MenuEncender 1.1
      */
     public int MenuEncender(){
-        boolean continuar = true;
+        
         int desicion = 0;
-        while(continuar){
+        
         System.out.println("--------------------------------------------------------");
         System.out.println("-------------------- Apagadar/Encender radio ------------------");
         System.out.println("--------------------------------------------------------");
@@ -136,15 +136,16 @@ public class Vista {
         switch (desicion) {
             //Encender Radio
             case 1:
-                TipoRadio();
+                
                 System.out.println("----Se a encendido correctamente la radio----");
+                
                 break;
                 //Apagar radio
                 default:
-                continuar = false;
+                
                 System.out.println("La radio esta Apagada");
                 break;
-        }
+        
         }
         System.out.println(); 
         return desicion;
@@ -157,9 +158,7 @@ public class Vista {
      * @version TipoRadio 1.1
      */
         public int TipoRadio(){
-            boolean continuar = true;
             int desicion = 0;
-            while(continuar){
             System.out.println("--------------------------------------------------------");
             System.out.println("-------------------- Tipo Radio ------------------");
             System.out.println("--------------------------------------------------------");
@@ -174,32 +173,7 @@ public class Vista {
             System.out.println("4. Salir");
             String s = " Ingrese su desicion: ";
             desicion = solicitar_int(s, 1, 4);
-        
-        // switch (desicion) {
-        //     //Clase S
-        //     case 1:
-        //         MenuprincipalS();
-        //         break;
-
-        //     //Clase A
-        //     case 2:
-        //         MenuprincipalA();
-        //         break;
-
-        //     //Clase C
-        //     case 3:
-        //         MenuprincipalC();
-        //         break;
-
-        //     //Salir
-        //     default:
-        //         continuar = false;
-        //         break;
-        // }
-        System.out.println();
-        
-        }
-        return desicion;
+            return desicion;
     }
         
     /**
@@ -208,12 +182,30 @@ public class Vista {
      * @author Grupo 9
      * @version MenuprincipalS 1.1
      */
-     public void MenuprincipalS(){
+     public void MenuprincipalS(Radio radioS){
         boolean continuar = true;
+        int volumen = radioS.get_volumen_radio();
         int desicion = 0;
         while(continuar){
         System.out.println("--------------------------------------------------------");
-        System.out.println("-------------------- Menu principal S ------------------");
+        System.out.println("-------------------- Radio S ------------------");
+        System.out.println();
+        for(int k = 0; k<(radioS.datos_radio().length) ;k++){
+            System.out.println(radioS.datos_radio()[k]);
+        }
+        System.out.println();
+        System.out.println("Volumen: "+volumen);
+        System.out.println();
+        System.out.println("Emisoras: ");
+        for(int k = 0; k<(radioS.get_emisoras().size()) ;k++){
+            System.out.println(radioS.get_emisoras().get(k));
+        }
+        System.out.println();
+        System.out.println("Lista de reproduccion:");
+        for(int i = 0; i<(radioS.get_lista_repruccion().size()) ;i++){
+            System.out.println(radioS.get_lista_repruccion().get(i));;
+        }
+        System.out.println();
         System.out.println("--------------------------------------------------------");
         System.out.println("- Actualmente usted esta en el tipo de radio S.");
         System.out.println("- Acontinuacion se muestra las opciones de la radio tipo S.");
@@ -232,7 +224,8 @@ public class Vista {
         switch (desicion) {
             //Cambiar volumen
             case 1:
-                Volumen();
+                int i = Volumen();
+                volumen = volumen + i;
                 break;
 
             //Modo radio
@@ -268,12 +261,30 @@ public class Vista {
      * @author Grupo 9
      * @version MenuprincipalA 1.1
      */
-    public void MenuprincipalA(){
+    public void MenuprincipalA(Radio radioA){
+        int volumen = radioA.get_volumen_radio();
         boolean continuar = true;
         int desicion = 0;
         while(continuar){
         System.out.println("--------------------------------------------------------");
         System.out.println("-------------------- Menu principal A ------------------");
+        System.out.println();
+        for(int k = 0; k<(radioA.datos_radio().length) ;k++){
+            System.out.println(radioA.datos_radio()[k]);
+        }
+        System.out.println();
+        System.out.println("VOLUMEN: "+volumen);
+        System.out.println();
+        System.out.println("Emisoras: ");
+        for(int k = 0; k<(radioA.get_emisoras().size()) ;k++){
+            System.out.println(radioA.get_emisoras().get(k));
+        }
+        System.out.println();
+        System.out.println("Lista de reproduccion:");
+        for(int i = 0; i<(radioA.get_lista_repruccion().size()) ;i++){
+            System.out.println(radioA.get_lista_repruccion().get(i));;
+        }
+        System.out.println();
         System.out.println("--------------------------------------------------------");
         System.out.println("- Actualmente usted esta en el tipo de radio A.");
         System.out.println("- Acontinuacion se muestra las opciones de la radio tipo A.");
@@ -292,7 +303,8 @@ public class Vista {
         switch (desicion) {
             //Cambiar volumen
             case 1:
-                Volumen();
+                int i = Volumen();
+                volumen = volumen + i;
                 break;
 
             //Modo radio
@@ -328,12 +340,30 @@ public class Vista {
      * @author Grupo 9
      * @version MenuprincipalC 1.1
      */
-    public void MenuprincipalC(){
+    public void MenuprincipalC(Radio radioC){
+        int volumen = radioC.get_volumen_radio();
         boolean continuar = true;
         int desicion = 0;
         while(continuar){
         System.out.println("--------------------------------------------------------");
         System.out.println("-------------------- Menu principal C ------------------");
+        System.out.println();
+        for(int k = 0; k<(radioC.datos_radio().length) ;k++){
+            System.out.println(radioC.datos_radio()[k]);
+        }
+        System.out.println();
+        System.out.println("Volumen: "+volumen);
+        System.out.println();
+        System.out.println("Emisoras: ");
+        for(int k = 0; k<(radioC.get_emisoras().size()) ;k++){
+            System.out.println(radioC.get_emisoras().get(k));
+        }
+        System.out.println();
+        System.out.println("Lista de reproduccion:");
+        for(int i = 0; i<(radioC.get_lista_repruccion().size()) ;i++){
+            System.out.println(radioC.get_lista_repruccion().get(i));;
+        }
+        System.out.println();
         System.out.println("--------------------------------------------------------");
         System.out.println("- Actualmente usted esta en el tipo de radio C.");
         System.out.println("- Acontinuacion se muestra las opciones de la radio tipo C.");
@@ -352,7 +382,8 @@ public class Vista {
         switch (desicion) {
             //Cambiar volumen
             case 1:
-                Volumen();
+            int i = Volumen();
+            volumen = volumen + i;
                 break;
 
             //Modo radio
@@ -388,9 +419,10 @@ public class Vista {
      * @author Grupo 9
      * @version Volumen 1.1
      */
-    public void Volumen(){
+    public int Volumen(){
         boolean continuar = true;
         int desicion = 0;
+        int subir_bajar = 0;
         while(continuar){
         System.out.println("--------------------------------------------------------");
         System.out.println("-------------------- Cambiar volumen ------------------");
@@ -403,28 +435,23 @@ public class Vista {
         System.out.println("¿Que producto desea probar?");
         System.out.println("1. Subir volumen");
         System.out.println("2. Bajar volumen");
-        System.out.println("3. Salir");
         String s = " Ingrese su desicion: ";
-        desicion = solicitar_int(s, 1, 3);
+        desicion = solicitar_int(s, 1, 2);
         switch (desicion) {
             //Subir volumen
             case 1:
-                
+                subir_bajar = 1;
+                continuar = false;
                 break;
 
             //Bajar Volumen
-            case 2:
-                
-                break;
-
-            //Salir
             default:
+                subir_bajar = -1;
                 continuar = false;
-                break;
-        
+                break;   
     }
 }
-    
+    return subir_bajar;
 }
 
     /**

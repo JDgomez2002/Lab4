@@ -10,6 +10,8 @@
 //Sección 11
 //Actividad: Laboratorio 4
 
+import java.util.ArrayList;
+
 /**
  * Clase  Radio <<Interface>> 
  * 
@@ -28,19 +30,15 @@ interface Radio {
 
     void cambiar_emisora();
 
-    void guardar_emisora();
+    void guardar_emisora(String c);
 
-    void cargar_emisora();
+    String cargar_emisora(String i);
 
     boolean get_estado_radio();
 
     int get_volumen_radio();
 
-    void seleccionar_lista_reproduccion(int seleccrepro);
-
-    void cambiar_cancion();
-
-    void escuchar_cancion();
+    String seleccionar_lista_reproduccion(int indice);
 
     void conectar_desconectar_telefono();
 
@@ -50,6 +48,10 @@ interface Radio {
 
     String finalizar_llamada();
 
+    String[] datos_radio();
 
+    ArrayList<String> get_emisoras();
+
+    ArrayList<String> get_lista_repruccion();
     
 }

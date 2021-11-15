@@ -19,7 +19,12 @@
 
 public class MAIN{
     public static void main(String[] args) {
-        Vista interfaz = new Vista(); 
-         interfaz.MenuEncender();
+        try{
+            Controlador c = new Controlador();
+            c.simuladorRadio();
+        }
+        catch(Exception e){
+            System.out.println("Ha ocurrido un error: MercedesBenz: "+e.getMessage());
+        }
     }
 }
