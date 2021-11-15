@@ -38,14 +38,15 @@ public class Controlador {
                 //Encendido
                 case 1:
                     int tipo_radio = interfaz.TipoRadio();
-                    System.out.println("1xd");
+                    
+                    //Radio polimorfico por medio del constructor.
                     MercedesBenz simulador = new MercedesBenz(tipo_radio);
                     if((tipo_radio>0)&&(tipo_radio<4)){
                         
                         switch (tipo_radio) {
                             //S
                             case 1:
-                                System.out.println("xd");
+                                
                                 interfaz.MenuprincipalS(simulador.get_radio());
                                 break;
 
