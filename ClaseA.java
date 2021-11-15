@@ -16,6 +16,6 @@
  * @author Grupo 8
  * @version ClaseA 1.1
  */
-public class ClaseA {
+public class ClaseA implements Radio{
     
 }

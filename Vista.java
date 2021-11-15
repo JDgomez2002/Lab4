@@ -9,6 +9,7 @@
 //21285
 //Sección 11
 //Actividad: Laboratorio 4
+
 import java.util.*;
 
 /**
@@ -106,7 +107,7 @@ public class Vista {
         System.out.println("------------ BIENVENID@ ------------");
         System.out.println("---------------------------------------------------------------------------------------------------------------------");
         System.out.println("- Esto es un simulador de radios para vehiculos!");
-        System.out.println("- Podra probar 3 tipos diferentes de bocinas...");
+        System.out.println("- Podra probar 3 tipos diferentes de radios...");
         System.out.println("- Que suenen las radios!!!");
         System.out.println("---------------------------------------------------------------------------------------------------------------------");
         System.out.println();
@@ -117,7 +118,7 @@ public class Vista {
      * @author Grupo 9
      * @version MenuEncender 1.1
      */
-    public void MenuEncender(){
+    public int MenuEncender(){
         boolean continuar = true;
         int desicion = 0;
         while(continuar){
@@ -146,6 +147,7 @@ public class Vista {
         }
         }
         System.out.println(); 
+        return desicion;
         }
         
     /**
@@ -154,7 +156,7 @@ public class Vista {
      * @author Grupo 9
      * @version TipoRadio 1.1
      */
-        public void TipoRadio(){
+        public int TipoRadio(){
             boolean continuar = true;
             int desicion = 0;
             while(continuar){
@@ -173,30 +175,31 @@ public class Vista {
             String s = " Ingrese su desicion: ";
             desicion = solicitar_int(s, 1, 4);
         
-        switch (desicion) {
-            //Clase S
-            case 1:
-                MenuprincipalS();
-                break;
+        // switch (desicion) {
+        //     //Clase S
+        //     case 1:
+        //         MenuprincipalS();
+        //         break;
 
-            //Clase A
-            case 2:
-                MenuprincipalA();
-                break;
+        //     //Clase A
+        //     case 2:
+        //         MenuprincipalA();
+        //         break;
 
-            //Clase C
-            case 3:
-                MenuprincipalC();
-                break;
+        //     //Clase C
+        //     case 3:
+        //         MenuprincipalC();
+        //         break;
 
-            //Salir
-            default:
-                continuar = false;
-                break;
-        }
+        //     //Salir
+        //     default:
+        //         continuar = false;
+        //         break;
+        // }
         System.out.println();
         
         }
+        return desicion;
     }
         
     /**
@@ -792,4 +795,21 @@ public void TelefonoConectadoC(){
 }
 }
 }
+
+/**
+     * Despedida para el usuario
+     * 
+     * @author Grupo 9
+     * @version despedida 1.1
+     */
+    public void despedida(){
+        System.out.println();
+        System.out.println("\tSaliendo de el Radio...");
+        System.out.println();
+        System.out.println("\t\tGracias por utilizar nuestros servicios...");
+        System.out.println("\t\tEsperamos que vuelva pronto!!!");
+        System.out.println();
+        System.out.println("---------------------------------------------------------------------------------------------------------------------");
+    }
+
 }

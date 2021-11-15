@@ -24,7 +24,37 @@ public class Controlador {
      * @author Grupo 9
      * @version ElectronicaLatinoamericana 1.1
      */
-            Vista interfaz = new Vista();
+    public void simuladorRadio(){
+        Vista interfaz = new Vista();
+        MercedesBenz radio = new MercedesBenz();
+
+        interfaz.bienvenida();
+
+        boolean continuar = true;
+        int encendido = 0;
+
+        while(continuar){
+            encendido = interfaz.MenuEncender();
+            switch (encendido) {
+                //Encendido
+                case 1:
+                    int tipo_radio = interfaz.TipoRadio();
+                    
+
+
+
+                    break;
+                
+                //Apagado
+                default:
+                    continuar = false;
+                    break;
+            }
+        }
+        interfaz.despedida();
+    }
+
+        
             
            
 }
